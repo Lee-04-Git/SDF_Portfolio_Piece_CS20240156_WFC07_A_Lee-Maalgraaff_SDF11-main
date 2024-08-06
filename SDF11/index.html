@@ -46,7 +46,7 @@
           <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
           <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
         </div>
-        <button> <!--Hamburger Menu-->
+        <button class="p-4 md:hidden" id="mobile-menu-toggle"> <!--Hamburger Menu-->
           <svg
           fill="none"
           viewBox="0 0 24 24"
@@ -97,6 +97,11 @@
   <div class="w-full bg-green-500">
       <!-- Full-width footer container with green background -->
   </div>
+  <script>
+    document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
+      alert("Hello!")
+    })
+  </script>
   <!-- these scripts are going to help with functionality later -->
   <!-- <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
   <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/countto.js"></script>
