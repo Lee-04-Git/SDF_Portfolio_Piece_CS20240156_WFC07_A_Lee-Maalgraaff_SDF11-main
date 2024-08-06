@@ -26,23 +26,22 @@
   <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
 </head>
 
-<body class="bg-grey-100"> <!--changed bg color-->
+<body class="bg-grey-200"> <!--changed bg color-->
 <div>
     <!-- COMPONENT 1 -->
-
-    <div class="mx-auto bg-white"> <!--removed flex flex col and container class-->
+    <div class="mx-auto bg-white">
       <!-- Main container with navigation and header content -->
        <div class="relative flex flex-wrap items-center justify-between w-full shrink-0">
         <div class="px-4">  <!--CACHE logo-->
           <img class="h-8" src="./assets/component-1/navigation/cache-bank-logo.png" />
         </div>
-        <div class="md:flex items-center justify-between text-black gap-12"> <!--Product, Features, Get Started, Contact-->
-          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Product</a>
-          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Features</a>
-          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Get Started</a>
-          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
+        <div class="hidden md:flex items-center justify-between text-black gap-12"> <!--Product, Features, Get Started, Contact-->
+          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#product">Product</a>
+          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#features">Features</a>
+          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#pricing">Get Started</a>
+          <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#contact">Contact</a>
         </div>
-        <div class="gap-8 p-4 items-center md:flex"> <!--Log In & Sign Up Buttons-->
+        <div class="hidden gap-8 p-4 items-center md:flex"> <!--Log In & Sign Up Buttons-->
           <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
           <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
         </div>
@@ -75,31 +74,32 @@
           </defs>
         </svg>
         </button>
-        <div class="absolute md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main" id="mobile-menu"> <!--Mobile View-->
-          <div class="md:flex items-center justify-between text-black gap-12"> <!--Product, Features, Get Started, Contact-->
-            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Product</a>
-            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Features</a>
-            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Get Started</a>
-            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="">Contact</a>
-          </div>
-          <div class="gap-8 p-4 items-center md:flex"> <!--Log In & Sign Up Buttons-->
+        <div class="absolute hidden md:hidden flex md:flex flex-col items-start justify-center w-full gap-3 overflow-hidden bg-white max-h-screen top-full px-4 py-8 shadow-main" id="mobile-menu"> <!--Mobile View-->
+            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#product">Product</a>
+            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#features">Features</a>
+            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#pricing">Get Started</a>
+            <a class="text-sm font-normal text-dark-grey-700 hover:text-dark-grey-900" href="#contact">Contact</a>
+        
             <button class="text-sm font-normal text-dark-grey-800 hover:text-dark-grey-900">Log In</button>
             <button class="px-4 py-2 text-sm font-bold text-blue bg-green-500 rounded-xl hover:bg-pink-500">Sign Up</button>
           </div>
         </div>
        </div> 
   </div>
-
-  <div class="w-full">
+  <!-- COMPONENT 2 -->
+  <div class="w-full" id="product">
       <!-- Wide full-width container for additional content -->
   </div>
-  <div class="container mx-auto">
+  <!-- COMPONENT 3 -->
+  <div class="container mx-auto" id="features">
       <!-- Centered container for more content -->
   </div>
-  <div class="w-full">
+  <!-- COMPONENT 4 -->
+  <div class="w-full" id="pricing">
       <!-- Wide full-width container for additional content -->
   </div>
-  <div class="w-full">
+  <!-- COMPONENT 5 CONTACT-->
+  <div class="w-full" id="contact">
       <!-- Wide full-width container for additional content -->
   </div>
 </div>
@@ -110,8 +110,8 @@
   </div>
   <script>
     document.getElementById("mobile-menu-toggle").addEventListener("click", function() {
-      getElementById("mobile-menu").classList.toggle("hidden")
-    })
+    document.getElementById("mobile-menu").classList.toggle("hidden");
+});
   </script>
   <!-- these scripts are going to help with functionality later -->
   <!-- <script src="https://cdn.jsdelivr.net/gh/Loopple/loopple-public-assets@main/motion-tailwind/scripts/plugins/countup.min.js"></script>
